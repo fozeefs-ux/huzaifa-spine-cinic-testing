@@ -38,7 +38,7 @@ const stories = [
     quote: "The sciatica that ruled my life is gone. Two thumbs up — and one straight leg.",
     body: "Sciatic compression had reshaped how Azam sat, slept and walked. Focused lumbar and pelvic correction released the nerve pathway; within weeks the radiating leg pain that had defined his routine was no longer part of it.",
     video: "https://youtube.com/shorts/k8wb5X3XLhk",
-    image: azamAsset.url,
+    image: azamAsset,
   },
   {
     name: "Shayan",
@@ -47,7 +47,7 @@ const stories = [
     quote: "I walked in bracing. I walked out standing tall.",
     body: "Young, active, and increasingly trapped by a back that wouldn't cooperate. A short, precise course of spinal correction returned Shayan to the posture — and the confidence — of his age.",
     video: "https://youtube.com/shorts/UxAR4pzotcc",
-    image: shayanAsset.url,
+    image: shayanAsset,
   },
 ];
 
