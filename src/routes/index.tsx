@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import spineHero from "@/assets/spine-hero.jpg";
 import anatomyNeck from "@/assets/anatomy-neck.jpg";
 import textureDark from "@/assets/texture-dark.jpg";
-import { PhotoSlot } from "@/components/site/PhotoSlot";
 import { SectionMarker } from "@/components/site/SectionMarker";
+import portraitAsset from "@/assets/dr-saleem-portrait.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -193,7 +193,15 @@ function Home() {
       <section className="relative py-32 lg:py-44">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
-            <PhotoSlot label="Dr. Saleem Uddin" caption="Portrait · Studio" aspect="portrait" />
+            <div className="relative aspect-[4/5] overflow-hidden grain vignette">
+              <img
+                src={portraitAsset.url}
+                alt="Dr. Saleem Uddin — Karachi's chiropractor"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+            </div>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             <SectionMarker index="03" label="The Practitioner" />

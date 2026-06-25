@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PhotoSlot } from "@/components/site/PhotoSlot";
 import { SectionMarker } from "@/components/site/SectionMarker";
+import ashrafAsset from "@/assets/ashraf-japan.png.asset.json";
+import azamAsset from "@/assets/azam-sciatica.png.asset.json";
+import shayanAsset from "@/assets/shayan-back.png.asset.json";
+import treatingAsset from "@/assets/dr-saleem-treating.png.asset.json";
 
 export const Route = createFileRoute("/stories")({
   head: () => ({
@@ -10,6 +13,8 @@ export const Route = createFileRoute("/stories")({
       { property: "og:title", content: "Patient Stories — Huzaifa Spine Clinic" },
       { property: "og:description", content: "Documented healing stories from Karachi's #1 chiropractor." },
       { property: "og:url", content: "/stories" },
+      { property: "og:image", content: treatingAsset.url },
+      { name: "twitter:image", content: treatingAsset.url },
     ],
     links: [{ rel: "canonical", href: "/stories" }],
   }),
@@ -18,36 +23,31 @@ export const Route = createFileRoute("/stories")({
 
 const stories = [
   {
-    name: "F. Khan",
-    age: "47",
-    where: "Gulshan-e-Iqbal",
-    condition: "Sciatica · 2 years",
-    quote: "Two years of pain. Three sessions. I forgot what limping felt like.",
-    body: "F. arrived unable to sit through a single meal. Within three weeks of focused work on the lumbar and pelvis, she walked into the clinic for the fourth session — and forgot to mention her leg.",
+    name: "Ashraf",
+    origin: "Visiting from Japan",
+    condition: "Shoulder · Neck · Back · Knee · 9 years",
+    quote: "Nine years of pain across four regions. I flew from Japan for this. I am leaving lighter than I arrived.",
+    body: "Ashraf carried nearly a decade of compounded pain — shoulders, neck, back and knees, all asking for attention at once. A staged protocol unwound the layers in sequence, restoring range and quieting the chronic inflammation that had become his baseline.",
+    video: "https://youtu.be/MnUgQjZ-qf0",
+    image: ashrafAsset.url,
   },
   {
-    name: "A. Rehman",
-    age: "52",
-    where: "DHA, Karachi",
-    condition: "Disc Herniation",
-    quote: "My surgeon scheduled my disc operation. Dr. Saleem cancelled it.",
-    body: "An MRI-confirmed L5–S1 herniation. A. came to the clinic four weeks before a scheduled surgery. Today, a year on, the operation has never been needed.",
+    name: "Azam",
+    origin: "Karachi",
+    condition: "Sciatica",
+    quote: "The sciatica that ruled my life is gone. Two thumbs up — and one straight leg.",
+    body: "Sciatic compression had reshaped how Azam sat, slept and walked. Focused lumbar and pelvic correction released the nerve pathway; within weeks the radiating leg pain that had defined his routine was no longer part of it.",
+    video: "https://youtube.com/shorts/k8wb5X3XLhk",
+    image: azamAsset.url,
   },
   {
-    name: "S. Memon",
-    age: "39",
-    where: "PECHS",
-    condition: "Frozen Shoulder",
-    quote: "I came in unable to lift my arm. I left choosing which shirt to wear.",
-    body: "Adhesive capsulitis is patient work. Six weeks of methodical capsular release and cervical correction restored full overhead range with no surgical intervention.",
-  },
-  {
-    name: "M. Ahmed",
-    age: "61",
-    where: "North Nazimabad",
-    condition: "Chronic Neck Pain · 8 years",
-    quote: "Eight years of headaches. Gone in a month.",
-    body: "Cervical realignment changed the geometry of his daily life. Headaches that ruled his afternoons no longer arrive at all.",
+    name: "Shayan",
+    origin: "Karachi",
+    condition: "Chronic Back Pain",
+    quote: "I walked in bracing. I walked out standing tall.",
+    body: "Young, active, and increasingly trapped by a back that wouldn't cooperate. A short, precise course of spinal correction returned Shayan to the posture — and the confidence — of his age.",
+    video: "https://youtube.com/shorts/UxAR4pzotcc",
+    image: shayanAsset.url,
   },
 ];
 
@@ -63,7 +63,7 @@ function StoriesPage() {
             <em className="text-gold">Real</em> restoration.
           </h1>
           <p className="mt-12 max-w-xl text-lg text-muted-foreground leading-relaxed text-pretty">
-            Documented recoveries — not stock testimonials. Names abbreviated for privacy; stories preserved in full on our YouTube channel of 2.8k spine-care enthusiasts.
+            Documented recoveries — not stock testimonials. Every case below is published in full on our YouTube channel of 2.8k spine-care enthusiasts.
           </p>
         </div>
       </section>
@@ -74,7 +74,22 @@ function StoriesPage() {
           <article key={s.name} className={`relative border-t border-border ${i % 2 === 1 ? "bg-card" : ""}`}>
             <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-24 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
               <div className={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                <PhotoSlot label={`${s.name} · ${s.condition.split("·")[0].trim()}`} caption={s.where} aspect="portrait" />
+                <div className="relative overflow-hidden aspect-[4/5] grain vignette">
+                  <img
+                    src={s.image}
+                    alt={`${s.name} — ${s.condition} recovery at Huzaifa Spine Clinic`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+                    <div>
+                      <div className="font-display italic text-3xl text-foreground">{s.name}</div>
+                      <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-gold mt-1">{s.origin}</div>
+                    </div>
+                    <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-muted-foreground">Case 0{i + 1}</span>
+                  </div>
+                </div>
               </div>
               <div className={`lg:col-span-6 ${i % 2 === 1 ? "lg:order-1 lg:col-start-2" : "lg:col-start-7"}`}>
                 <div className="flex items-center gap-3 mb-6">
@@ -86,13 +101,19 @@ function StoriesPage() {
                   "{s.quote}"
                 </blockquote>
                 <p className="mt-10 text-base text-muted-foreground leading-relaxed text-pretty max-w-xl">{s.body}</p>
-                <div className="mt-10 pt-6 border-t border-border flex items-center justify-between max-w-xl">
-                  <div>
-                    <div className="font-medium">{s.name}</div>
-                    <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground mt-1">{s.where}</div>
-                  </div>
-                  <div className="font-display text-2xl text-gold">{s.age}</div>
-                </div>
+
+                <a
+                  href={s.video}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-10 inline-flex items-center gap-4 border border-gold/40 hover:bg-gold hover:text-background transition-all duration-500 px-7 h-12 group"
+                >
+                  <span className="size-2 rounded-full bg-gold group-hover:bg-background" />
+                  <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-gold group-hover:text-background">
+                    Watch {s.name}'s story
+                  </span>
+                  <span className="text-gold group-hover:text-background">↗</span>
+                </a>
               </div>
             </div>
           </article>
@@ -111,7 +132,7 @@ function StoriesPage() {
               2,800 spine-care enthusiasts. Patient sessions, adjustments, recoveries — documented in long form. No filters, no editing tricks. Just the work.
             </p>
             <a
-              href="https://www.youtube.com/channel/UCZVNLkEzBQ4m0sMLq9jEOIw"
+              href="https://www.youtube.com/@huzaifaspineclinic"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-12 inline-flex items-center gap-4 border border-gold/40 hover:bg-gold hover:text-background transition-all duration-500 px-8 h-14"
@@ -121,7 +142,18 @@ function StoriesPage() {
             </a>
           </div>
           <div className="lg:col-span-5">
-            <PhotoSlot label="Adjustment in session" caption="Behind the scenes · Studio cut" aspect="landscape" />
+            <div className="relative aspect-[4/5] overflow-hidden grain vignette">
+              <img
+                src={treatingAsset.url}
+                alt="Dr. Saleem performing an adjustment at Huzaifa Spine Clinic"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 text-[10px] font-mono uppercase tracking-[0.3em] text-gold">
+                Behind the scenes · The work
+              </div>
+            </div>
           </div>
         </div>
       </section>
