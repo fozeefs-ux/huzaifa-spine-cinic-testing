@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import spineHero from "@/assets/spine-hero.jpg";
 import anatomyNeck from "@/assets/anatomy-neck.jpg";
 import textureDark from "@/assets/texture-dark.jpg";
-import { PhotoSlot } from "@/components/site/PhotoSlot";
 import { SectionMarker } from "@/components/site/SectionMarker";
+import portraitAsset from "@/assets/dr-saleem-portrait.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -193,7 +193,15 @@ function Home() {
       <section className="relative py-32 lg:py-44">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
-            <PhotoSlot label="Dr. Saleem Uddin" caption="Portrait · Studio" aspect="portrait" />
+            <div className="relative aspect-[4/5] overflow-hidden grain vignette">
+              <img
+                src={portraitAsset.url}
+                alt="Dr. Saleem Uddin — Karachi's chiropractor"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+            </div>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             <SectionMarker index="03" label="The Practitioner" />
@@ -265,9 +273,9 @@ function Home() {
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { quote: "Two years of pain. Three sessions. I forgot what limping felt like.", who: "F.K.", where: "Gulshan-e-Iqbal", role: "Sciatica" },
-              { quote: "My surgeon scheduled my disc operation. Dr. Saleem cancelled it.", who: "A.R.", where: "DHA, Karachi", role: "Disc Herniation" },
-              { quote: "I came in unable to lift my arm. I left choosing which shirt to wear.", who: "S.M.", where: "PECHS", role: "Frozen Shoulder" },
+              { quote: "Nine years of pain across four regions. I flew from Japan for this.", who: "Ashraf", where: "Visiting from Japan", role: "Shoulder · Neck · Back · Knee" },
+              { quote: "The sciatica that ruled my life is gone. Two thumbs up — and one straight leg.", who: "Azam", where: "Karachi", role: "Sciatica" },
+              { quote: "I walked in bracing. I walked out standing tall.", who: "Shayan", where: "Karachi", role: "Back Pain" },
             ].map((t, i) => (
               <article key={i} className="group relative bg-card p-8 lg:p-10 border border-border hover:border-gold/40 transition-all duration-500">
                 <span className="font-display text-6xl text-gold/30 absolute top-6 right-8">"</span>

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PhotoSlot } from "@/components/site/PhotoSlot";
 import { SectionMarker } from "@/components/site/SectionMarker";
+import portraitAsset from "@/assets/dr-saleem-portrait.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -43,7 +43,15 @@ function AboutPage() {
       <section className="relative py-24 lg:py-32 bg-card">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
-            <PhotoSlot label="Dr. Saleem in studio" caption="Editorial portrait" aspect="portrait" />
+            <div className="relative aspect-[4/5] overflow-hidden grain vignette">
+              <img
+                src={portraitAsset.url}
+                alt="Dr. Saleem Uddin — founder of Huzaifa Spine Clinic, Karachi"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            </div>
           </div>
           <div className="lg:col-span-6">
             <blockquote className="font-display text-3xl lg:text-5xl italic leading-tight text-balance">
