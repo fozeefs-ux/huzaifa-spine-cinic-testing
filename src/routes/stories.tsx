@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionMarker } from "@/components/site/SectionMarker";
-import ashrafAsset from "@/assets/ashraf-japan.png.asset.json";
-import azamAsset from "@/assets/azam-sciatica.png.asset.json";
-import shayanAsset from "@/assets/shayan-back.png.asset.json";
-import treatingAsset from "@/assets/dr-saleem-treating.png.asset.json";
+import ashrafAsset from "@/assets/ashraf-japan.png";
+import azamAsset from "@/assets/azam-sciatica.png";
+import shayanAsset from "@/assets/shayan-back.png";
+import treatingAsset from "@/assets/dr-saleem-treating.png";
 
 export const Route = createFileRoute("/stories")({
   head: () => ({
