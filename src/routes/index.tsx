@@ -273,9 +273,9 @@ function Home() {
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { quote: "Two years of pain. Three sessions. I forgot what limping felt like.", who: "F.K.", where: "Gulshan-e-Iqbal", role: "Sciatica" },
-              { quote: "My surgeon scheduled my disc operation. Dr. Saleem cancelled it.", who: "A.R.", where: "DHA, Karachi", role: "Disc Herniation" },
-              { quote: "I came in unable to lift my arm. I left choosing which shirt to wear.", who: "S.M.", where: "PECHS", role: "Frozen Shoulder" },
+              { quote: "Nine years of pain across four regions. I flew from Japan for this.", who: "Ashraf", where: "Visiting from Japan", role: "Shoulder · Neck · Back · Knee" },
+              { quote: "The sciatica that ruled my life is gone. Two thumbs up — and one straight leg.", who: "Azam", where: "Karachi", role: "Sciatica" },
+              { quote: "I walked in bracing. I walked out standing tall.", who: "Shayan", where: "Karachi", role: "Back Pain" },
             ].map((t, i) => (
               <article key={i} className="group relative bg-card p-8 lg:p-10 border border-border hover:border-gold/40 transition-all duration-500">
                 <span className="font-display text-6xl text-gold/30 absolute top-6 right-8">"</span>
