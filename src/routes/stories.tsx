@@ -106,7 +106,11 @@ function StoriesPage() {
                   href={s.video}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-10 inline-flex items-center gap-4 border border-gold/40 hover:bg-gold hover:text-background transition-all duration-500 px-7 h-12 group"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open(s.video, "_blank", "noopener,noreferrer");
+                  }}
+                  className="mt-10 inline-flex items-center gap-4 border border-gold/40 hover:bg-gold hover:text-background transition-all duration-500 px-7 h-12 group cursor-pointer"
                 >
                   <span className="size-2 rounded-full bg-gold group-hover:bg-background" />
                   <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-gold group-hover:text-background">
@@ -114,6 +118,7 @@ function StoriesPage() {
                   </span>
                   <span className="text-gold group-hover:text-background">↗</span>
                 </a>
+
               </div>
             </div>
           </article>
@@ -135,11 +140,16 @@ function StoriesPage() {
               href="https://www.youtube.com/@huzaifaspineclinic"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-12 inline-flex items-center gap-4 border border-gold/40 hover:bg-gold hover:text-background transition-all duration-500 px-8 h-14"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open("https://www.youtube.com/@huzaifaspineclinic", "_blank", "noopener,noreferrer");
+              }}
+              className="mt-12 inline-flex items-center gap-4 border border-gold/40 hover:bg-gold hover:text-background transition-all duration-500 px-8 h-14 cursor-pointer"
             >
               <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-gold group-hover:text-background">Visit YouTube</span>
               <span className="text-gold">↗</span>
             </a>
+
           </div>
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden grain vignette">
