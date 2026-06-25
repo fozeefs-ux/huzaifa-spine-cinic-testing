@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionMarker } from "@/components/site/SectionMarker";
-import portraitAsset from "@/assets/dr-saleem-portrait.png.asset.json";
+import portraitAsset from "@/assets/dr-saleem-portrait.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
