@@ -154,7 +154,7 @@ function StoriesPage() {
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden grain vignette">
               <img
-                src={treatingAsset.url}
+                src={treatingAsset}
                 alt="Dr. Saleem performing an adjustment at Huzaifa Spine Clinic"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
