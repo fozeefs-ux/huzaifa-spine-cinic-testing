@@ -3,7 +3,7 @@ import spineHero from "@/assets/spine-hero.jpg";
 import anatomyNeck from "@/assets/anatomy-neck.jpg";
 import textureDark from "@/assets/texture-dark.jpg";
 import { SectionMarker } from "@/components/site/SectionMarker";
-import portraitAsset from "@/assets/dr-saleem-portrait.png.asset.json";
+import portraitAsset from "@/assets/dr-saleem-portrait.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -195,7 +195,7 @@ function Home() {
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden grain vignette">
               <img
-                src={portraitAsset.url}
+                src={portraitAsset}
                 alt="Dr. Saleem Uddin — Karachi's chiropractor"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
