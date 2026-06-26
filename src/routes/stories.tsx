@@ -46,7 +46,7 @@ const stories = [
     condition: "Knee · Back · Combat Sports Injuries",
     quote: "A soldier on the mat, a soldier in the field. Dr. Saleem got me back to both.",
     body: "Years of judo competition and the demands of military service left Fayyaz with stubborn knee and back injuries that no longer responded to rest alone. A targeted course of spinal and joint correction restored the mobility his discipline — and his duty — require.",
-    video: "https://www.youtube.com/@huzaifaspineclinic",
+    video: "https://youtu.be/-svxXxSwCJg?si=jxzoMaZzw0ZPMMJE",
     image: fayyazAsset,
   },
 ];
