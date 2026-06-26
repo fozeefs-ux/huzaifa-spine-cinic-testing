@@ -49,7 +49,7 @@ function AboutPage() {
           <div className="lg:col-span-6">
             <div className="relative aspect-[4/5] overflow-hidden grain vignette">
               <img
-                src={portraitAsset.url}
+                src={portraitAsset}
                 alt="Dr. Saleem Uddin — founder of Huzaifa Spine Clinic, Karachi"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"

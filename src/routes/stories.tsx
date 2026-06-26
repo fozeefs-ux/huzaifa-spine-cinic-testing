@@ -29,7 +29,7 @@ const stories = [
     quote: "Nine years of pain across four regions. I flew from Japan for this. I am leaving lighter than I arrived.",
     body: "Ashraf carried nearly a decade of compounded pain — shoulders, neck, back and knees, all asking for attention at once. A staged protocol unwound the layers in sequence, restoring range and quieting the chronic inflammation that had become his baseline.",
     video: "https://youtu.be/MnUgQjZ-qf0",
-    <img src="/ashraf-japan.png" />
+    image: ashrafAsset,
   },
   {
     name: "Azam",
