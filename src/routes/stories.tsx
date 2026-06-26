@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionMarker } from "@/components/site/SectionMarker";
 import ashrafAsset from "@/assets/ashraf-japan.png";
 import azamAsset from "@/assets/azam-sciatica.png";
-import shayanAsset from "@/assets/shayan-back.png";
+import fayyazAsset from "@/assets/fayyaz-army.png";
 import treatingAsset from "@/assets/dr-saleem-treating.png";
 
 export const Route = createFileRoute("/stories")({
@@ -41,13 +41,13 @@ const stories = [
     image: azamAsset,
   },
   {
-    name: "Shayan",
-    origin: "Karachi",
-    condition: "Chronic Back Pain",
-    quote: "I walked in bracing. I walked out standing tall.",
-    body: "Young, active, and increasingly trapped by a back that wouldn't cooperate. A short, precise course of spinal correction returned Shayan to the posture — and the confidence — of his age.",
-    video: "https://youtube.com/shorts/UxAR4pzotcc",
-    image: shayanAsset,
+    name: "Fayyaz Ahmed",
+    origin: "Pakistan Army · Judo Master",
+    condition: "Knee · Back · Combat Sports Injuries",
+    quote: "A soldier on the mat, a soldier in the field. Dr. Saleem got me back to both.",
+    body: "Years of judo competition and the demands of military service left Fayyaz with stubborn knee and back injuries that no longer responded to rest alone. A targeted course of spinal and joint correction restored the mobility his discipline — and his duty — require.",
+    video: "https://www.youtube.com/@huzaifaspineclinic",
+    image: fayyazAsset,
   },
 ];
 
