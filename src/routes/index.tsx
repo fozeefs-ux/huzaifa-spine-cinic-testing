@@ -79,7 +79,7 @@ function Home() {
                 href="https://wa.me/923042357261"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] font-mono uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground transition-colors underline-offset-8 hover:underline"
+                className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#25D366] hover:text-[#1DA851] transition-colors duration-300 underline-offset-8 hover:underline"
               >
                 WhatsApp Clinic ↗
               </a>
