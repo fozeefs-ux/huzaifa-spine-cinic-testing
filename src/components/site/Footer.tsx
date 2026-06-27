@@ -40,8 +40,8 @@ export function Footer() {
               Karachi, Pakistan
             </address>
             <p className="mt-4 text-sm text-muted-foreground">
-              Mon — Sat<br />
-              11:00 — 20:00
+              Open Every Day (Except on Certain Occasions)<br />
+             3:30 PM — 11 PM
             </p>
           </div>
 
