@@ -44,7 +44,7 @@ function ContactPage() {
             <a href="tel:03042357261" className="bg-gold text-background px-8 h-14 inline-flex items-center text-[11px] font-mono uppercase tracking-[0.25em] hover:bg-foreground transition-all">
               Call Now
             </a>
-            <a href="https://wa.me/923042357261" target="_blank" rel="noopener noreferrer" className="border border-gold/40 text-gold px-8 h-14 inline-flex items-center text-[11px] font-mono uppercase tracking-[0.25em] hover:bg-gold hover:text-background transition-all">
+            <a href="https://wa.me/923042357261" target="_blank" rel="noopener noreferrer" className="border border-[#25D366]/50 text-[#25D366] px-8 h-14 inline-flex items-center text-[11px] font-mono uppercase tracking-[0.25em] hover:bg-[#25D366] hover:text-white transition-all">
               WhatsApp ↗
             </a>
           </div>
