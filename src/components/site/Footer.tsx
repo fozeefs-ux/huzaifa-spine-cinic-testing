@@ -36,7 +36,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <h4 className="text-[10px] font-mono uppercase tracking-[0.3em] text-gold mb-6">Clinic</h4>
             <address className="not-italic text-sm text-muted-foreground leading-relaxed">
-              Gulshan-e-Iqbal<br />
+              A-437, Block-1, Gulshan-e-Iqbal<br />
               Karachi, Pakistan
             </address>
             <p className="mt-4 text-sm text-muted-foreground">
